@@ -638,6 +638,122 @@ section { padding: 88px 0; }
   color: rgba(255,255,255,.4);
 }
 
+/* ============ LEGAL (privacy/terms) ============ */
+.legal { background: var(--white); padding: 56px 0 72px; }
+.legal .container { max-width: 760px; }
+.legal-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  color: var(--g600);
+  margin-bottom: 12px;
+}
+.legal-h {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  color: var(--g900);
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+.legal-meta {
+  font-size: 13px;
+  color: var(--gray);
+  font-family: 'Inter', 'Noto Sans KR', sans-serif;
+  letter-spacing: .02em;
+  margin-bottom: 28px;
+}
+.legal-intro {
+  font-size: 15px;
+  color: var(--coal);
+  line-height: 1.85;
+  margin-bottom: 32px;
+  padding: 18px 20px;
+  background: var(--g50);
+  border-left: 3px solid var(--g600);
+  border-radius: 6px;
+}
+.legal h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--g900);
+  line-height: 1.4;
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+.legal p {
+  font-size: 14.5px;
+  color: var(--coal);
+  line-height: 1.85;
+  margin-bottom: 12px;
+}
+.legal ul {
+  list-style: none;
+  margin-bottom: 16px;
+}
+.legal li {
+  font-size: 14.5px;
+  color: var(--coal);
+  line-height: 1.85;
+  padding: 4px 0 4px 18px;
+  position: relative;
+}
+.legal li::before {
+  content: '·';
+  position: absolute;
+  left: 4px;
+  color: var(--g600);
+  font-weight: 700;
+}
+.legal strong { color: var(--g900); font-weight: 700; }
+.legal code {
+  font-family: 'Inter', monospace;
+  font-size: 12.5px;
+  background: var(--lt);
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: var(--coal);
+}
+.legal-note {
+  font-size: 13.5px;
+  color: var(--gray);
+  background: var(--lt);
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin: 12px 0 16px;
+  line-height: 1.8;
+}
+.legal-contact {
+  background: var(--g50);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  font-size: 14px;
+  line-height: 2;
+  color: var(--coal);
+  margin-top: 8px;
+}
+.legal-contact strong {
+  display: inline-block;
+  min-width: 110px;
+  color: var(--g800);
+}
+.legal-foot {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--gray);
+}
+.legal-back {
+  margin-top: 28px;
+  font-size: 14px;
+}
+.legal-back a {
+  color: var(--g600);
+  font-weight: 700;
+}
+.legal-back a:hover { color: var(--g800); }
+
 /* ============ RESPONSIVE ============ */
 @media (max-width: 880px) {
   section { padding: 64px 0; }

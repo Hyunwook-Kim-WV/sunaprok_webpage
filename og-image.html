@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>OG Image — 수납록</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #fff;
+    background:
+      radial-gradient(900px 500px at 85% -5%, rgba(93,202,165,.32), transparent 60%),
+      radial-gradient(700px 380px at 8% 110%, rgba(29,158,117,.22), transparent 60%),
+      linear-gradient(180deg, #08332b 0%, #0a4337 55%, #0e5848 100%);
+    position: relative;
+  }
+  .frame {
+    width: 1200px; height: 630px;
+    padding: 70px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+  .brand-ko {
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+  }
+  .brand-en {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #5DCAA5;
+    margin-top: 6px;
+    letter-spacing: .06em;
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    color: #5DCAA5;
+    background: rgba(93,202,165,.14);
+    border: 1px solid rgba(93,202,165,.32);
+    padding: 8px 16px;
+    border-radius: 999px;
+    margin-bottom: 28px;
+  }
+  .headline {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1.22;
+    letter-spacing: -.025em;
+    margin-bottom: 28px;
+  }
+  .headline em {
+    color: #5DCAA5;
+    font-style: normal;
+    background: linear-gradient(180deg, transparent 64%, rgba(93,202,165,.28) 64%);
+    padding: 0 6px;
+  }
+  .sub {
+    font-size: 24px;
+    color: rgba(255,255,255,.78);
+    line-height: 1.55;
+    margin-bottom: 32px;
+    max-width: 920px;
+  }
+  .bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .badge {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 12px;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.16);
+    color: #fff;
+  }
+  .badge strong {
+    color: #5DCAA5;
+    margin-right: 4px;
+  }
+  .price {
+    text-align: right;
+  }
+  .price-tag {
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    color: #5DCAA5;
+    line-height: 1;
+    letter-spacing: -.02em;
+  }
+  .price-tag .won { font-size: 32px; color: rgba(255,255,255,.7); margin-left: 6px; }
+  .price-cap {
+    font-size: 16px;
+    color: rgba(255,255,255,.65);
+    margin-top: 8px;
+    letter-spacing: .04em;
+  }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="top">
+    <svg width="64" height="64" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+      <rect x="2" y="2" width="40" height="40" rx="10" fill="#1D9E75"/>
+      <rect x="10" y="8" width="24" height="28" rx="4" fill="none" stroke="white" stroke-width="2"/>
+      <line x1="15" y1="17" x2="29" y2="17" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="15" y1="22" x2="29" y2="22" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="15" y1="27" x2="22" y2="27" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="28" cy="27" r="4" fill="#5DCAA5"/>
+    </svg>
+    <div class="brand-text">
+      <div class="brand-ko">수납록</div>
+      <div class="brand-en">SUNAPROK · v1.0.0</div>
+    </div>
+  </div>
+
+  <div>
+    <span class="eyebrow">폐기물 처리장 전용 · Windows 설치형</span>
+    <h1 class="headline">
+      계근하면 <em>청구서가 자동</em>으로,<br>
+      월말이면 <em>정산서가 자동</em>으로.
+    </h1>
+    <p class="sub">
+      종이 장부·엑셀·카톡을 한 화면에서 끝냅니다.<br>
+      현장 PC에 설치 → 인터넷 끊겨도 계근·장부는 계속 동작.
+    </p>
+  </div>
+
+  <div class="bottom">
+    <div class="badges">
+      <div class="badge"><strong>·</strong> 완전 오프라인</div>
+      <div class="badge"><strong>·</strong> SMS 자동 발송</div>
+      <div class="badge"><strong>·</strong> 14일 무료 체험</div>
+    </div>
+    <div class="price">
+      <div class="price-tag">390,000<span class="won">원</span></div>
+      <div class="price-cap">1회 구매 · 월 구독료 없음</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
