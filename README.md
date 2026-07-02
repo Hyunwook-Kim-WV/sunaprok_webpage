@@ -32,7 +32,7 @@ webpage/
 ├── robots.txt        크롤러 정책 + sitemap 위치
 ├── styles.css        브랜드 컬러·반응형 레이아웃·.legal 토큰
 ├── script.js         FAQ 아코디언(단일 열기)
-├── favicon.svg       로고 (인라인 SVG와 동일)
+├── favicon.ico / favicon-*.png / apple-icon-180x180.png / android-icon-192x192.png  파비콘·로고 아이콘 패키지
 └── README.md
 ```
 
@@ -126,11 +126,14 @@ $src  = "file:///$($PWD -replace '\\','/')/og-image.html"
 
 ## 브랜딩
 
+Material Green (시드 #2E7D32)
+
 ```
-Primary  #0F6E56
-600      #1D9E75
-400      #5DCAA5
-50       #E1F5EE
+900      #1B5E20
+Primary  #2E7D32
+600      #43A047
+400      #66BB6A
+50       #E8F5E9
 Charcoal #2C2C2A
 Red      #E24B4A
 Amber    #EF9F27

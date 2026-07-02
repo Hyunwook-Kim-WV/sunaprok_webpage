@@ -4,11 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>개인정보처리방침 — 수납록</title>
-<meta name="description" content="수납록(SunapRok) 개인정보처리방침. 데모 신청 시에만 연락처를 1회 수집하며, 앱 운영 데이터는 사용자 PC에 로컬 저장됩니다.">
-<meta name="theme-color" content="#0F6E56">
+<meta name="description" content="수납록(SunapRok) 클라우드 SaaS 개인정보처리방침. 수집 항목, 클라우드 저장·처리위탁(Supabase·CoolSMS·Sentry 등), 보유기간, 정보주체 권리 안내.">
+<meta name="theme-color" content="#2E7D32">
 <meta name="robots" content="index,follow">
 
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 </head>
@@ -17,14 +20,9 @@
 <header class="nav">
   <div class="nav-inner">
     <a href="/" class="brand" aria-label="수납록 홈">
-      <svg width="36" height="36" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-        <rect x="2" y="2" width="40" height="40" rx="10" fill="#1D9E75"/>
-        <rect x="10" y="8" width="24" height="28" rx="4" fill="none" stroke="white" stroke-width="2"/>
-        <line x1="15" y1="17" x2="29" y2="17" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-        <line x1="15" y1="22" x2="29" y2="22" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-        <line x1="15" y1="27" x2="22" y2="27" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-        <circle cx="28" cy="27" r="4" fill="#5DCAA5"/>
-      </svg>
+      <span style="display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:9px;padding:2px;box-shadow:0 1px 2px rgba(0,0,0,.12)">
+        <img src="/android-icon-192x192.png" alt="" aria-hidden="true" width="36" height="36" style="display:block;border-radius:7px">
+      </span>
       <div class="brand-text">
         <div class="brand-ko">수납록</div>
         <div class="brand-en">SunapRok</div>
@@ -45,83 +43,104 @@
   <div class="container">
     <div class="legal-eyebrow">정책</div>
     <h1 class="legal-h">개인정보처리방침</h1>
-    <p class="legal-meta">시행일: 2026-05-20 · 버전 1.0</p>
+    <p class="legal-meta">시행일: 2026-06-21 · 버전 2.0</p>
 
     <p class="legal-intro">
-      굿플로우(이하 "회사")는 수납록(SunapRok, 이하 "서비스") 이용자의 개인정보를
-      소중히 다루며, 「개인정보 보호법」 등 관련 법령을 준수합니다. 본 방침은 회사가
-      어떤 정보를 어떻게 수집·이용·보관·파기하는지 안내합니다.
+      굿플로우(이하 "회사")는 클라우드 기반 폐기물 처리장 관리 서비스 "수납록"(SunapRok,
+      이하 "서비스") 이용자의 개인정보를 소중히 다루며, 「개인정보 보호법」 등 관련 법령을
+      준수합니다. 본 방침은 회사가 어떤 정보를 어떻게 수집·이용·보관·파기하는지 안내합니다.
     </p>
 
-    <h2>1. 수집하는 개인정보 항목</h2>
-    <p>
-      회사는 다음의 경우에 한해 개인정보를 수집합니다.
-    </p>
+    <h2>제1조 (개인정보의 처리 목적)</h2>
+    <p>수납록은 다음의 목적을 위하여 개인정보를 처리합니다.</p>
     <ul>
-      <li><strong>데모 신청 / 1:1 문의</strong> — 이메일 주소, 전화번호, 사업장명(선택)</li>
-      <li><strong>라이선스 구매·발급</strong> — 사업자등록증 사본, 대표자명, 발행 이메일, 연락처</li>
+      <li>회원 가입·인증 및 본인 확인</li>
+      <li>서비스 제공 (계근·청구·정산·SMS 발송 이력 관리)</li>
+      <li>요금 결제 및 정산</li>
+      <li>고객 상담 및 분쟁 해결</li>
+      <li>관련 법령에 따른 거래 기록 보존</li>
+      <li>서비스 운영·유지보수 및 기술지원 (장애 진단을 위한 운영자의 데이터 접근 포함)</li>
+    </ul>
+
+    <h2>제2조 (수집하는 개인정보 항목)</h2>
+    <ul>
+      <li><strong>회원(처리장 사업자)</strong> — 이메일, 비밀번호(해시 — 이메일 가입 시), Google 계정 식별자·이메일·이름(Google 로그인 시), 이름, 사업장명, 사업자등록번호, 연락처, 은행계좌, 결제 정보(결제대행사를 통해 처리)</li>
+      <li><strong>원배차자(B)</strong> — 상호/이름, 휴대전화번호(SMS 발송용), 사업자등록번호(선택), 담당자명(선택)</li>
+      <li><strong>자동 수집 항목</strong> — 접속 IP, 쿠키, 서비스 이용 기록, 접속 일시</li>
     </ul>
     <p class="legal-note">
-      ※ 수납록 데스크톱 앱 자체는 외부로 개인정보나 운영 데이터를 전송하지 않습니다.
-      모든 운영 데이터(계근·청구·정산·입금·장부)는 사용자 PC의
-      <code>%APPDATA%\com.dygks.sunaprok\sunaprok.db</code> 한 곳에만 저장됩니다.
-      SMS 발송 기능을 사용하실 때만 솔라피(Solapi) API로 사용자 본인이 직접 계약한
-      발신번호와 메시지가 전송되며, 이 트래픽은 회사 서버를 거치지 않습니다.
+      ※ 수납록은 클라우드 기반 SaaS이며, 회원·거래 데이터는 사용자 PC가 아니라
+      회사가 위탁한 클라우드 인프라(Supabase)에 저장·처리됩니다. SMS 발송 시에는
+      수신번호와 발송 본문이 발송 대행사(CoolSMS)로 전송됩니다. 자세한 위탁 내용은
+      제5조를 참고하시기 바랍니다.
     </p>
 
-    <h2>2. 개인정보 수집·이용 목적</h2>
+    <h2>제3조 (개인정보의 보유 및 이용 기간)</h2>
     <ul>
-      <li>데모 일정 안내, 견적 발송, 계약 진행</li>
-      <li>라이선스 키 발급 및 설치 지원</li>
-      <li>기술 지원, 업데이트 안내, 사용 문의 응대</li>
-      <li>세금계산서 발행 등 법령상 의무 이행</li>
+      <li>회원 정보: 서비스 이용 기간 + 탈퇴 후 즉시 파기. 단, 거래 정보는 아래 항목에 따라 보존.</li>
+      <li>폐기물 거래 기록(계근·청구·정산): 폐기물관리법령에 따라 최대 5년.</li>
+      <li>전자상거래 거래 기록: 전자상거래법에 따라 최대 5년.</li>
+      <li>로그 기록: 통신비밀보호법에 따라 3개월.</li>
+    </ul>
+    <p class="legal-note">
+      ※ 위 기간은 관계 법령상 보존 의무를 안내한 것으로, 구체적 적용 범위·기간은
+      법령 해석 및 실제 운영에 따라 달라질 수 있습니다.
+    </p>
+
+    <h2>제4조 (개인정보의 제3자 제공)</h2>
+    <p>회사는 정보주체의 동의 없이는 개인정보를 제3자에게 제공하지 않습니다. 다만 다음의 경우는 예외입니다.</p>
+    <ul>
+      <li>법령에 따른 의무 또는 수사기관의 적법한 절차에 따른 요청이 있는 경우</li>
+      <li>본인의 사전 동의가 있는 경우</li>
     </ul>
 
-    <h2>3. 개인정보 보유 및 이용 기간</h2>
+    <h2>제5조 (개인정보 처리 위탁)</h2>
+    <p>회사는 원활한 서비스 제공을 위해 다음 업체에 개인정보 처리를 위탁합니다.</p>
     <ul>
-      <li>데모 문의 기록: 문의 종결 후 <strong>1년</strong> 보관 후 파기</li>
-      <li>라이선스 구매·계약 정보: 「전자상거래법」에 따라 <strong>5년</strong> 보관</li>
-      <li>세금계산서·거래 기록: 「국세기본법」에 따라 <strong>5년</strong> 보관</li>
-      <li>이용자 요청 시 동의 철회 즉시 파기 (법령상 보관 의무가 있는 항목 제외)</li>
+      <li><strong>Supabase Inc. (미국)</strong> — 데이터베이스·인증 호스팅 / 전체 회원·거래 데이터</li>
+      <li><strong>Vercel Inc. (미국)</strong> — 웹 애플리케이션 호스팅 / 접속 IP, 쿠키</li>
+      <li><strong>㈜코드몽키(CoolSMS)</strong> — SMS 발송 / 수신번호, 발송 본문</li>
+      <li><strong>㈜아임포트(PortOne)</strong> — 구독 결제 처리 / 결제 정보</li>
+      <li><strong>Sentry (Functional Software, Inc., 미국)</strong> — 서비스 오류 모니터링 / 오류 발생 시 접속 환경·이용 기록</li>
+      <li><strong>Google LLC (미국)</strong> — 소셜 로그인(OAuth) 인증 / Google 계정 식별자·이메일</li>
+    </ul>
+    <p class="legal-note">
+      ※ 일부 수탁업체는 국외에 소재하여 개인정보가 국외로 이전될 수 있습니다.
+      위탁 업체·업무 내용은 서비스 변경에 따라 갱신될 수 있으며, 변경 시 본 방침을 통해 공지합니다.
+    </p>
+
+    <h2>제6조 (정보주체의 권리)</h2>
+    <p>정보주체는 언제든 다음 권리를 행사할 수 있습니다.</p>
+    <ul>
+      <li>개인정보 열람 — 서비스 내 [설정]에서 직접 확인</li>
+      <li>정정·삭제 — 서비스 내 [설정] 또는 고객지원 요청</li>
+      <li>처리 정지 요구 — 회원 탈퇴 또는 사업장 폐쇄로 가능</li>
+      <li>데이터 이동권 — 서비스 내 [설정 → 데이터 내보내기]에서 전체 데이터를 JSON/CSV로 다운로드</li>
     </ul>
 
-    <h2>4. 개인정보 제3자 제공</h2>
-    <p>
-      회사는 이용자의 개인정보를 외부에 제공하지 않습니다. 다만 다음의 경우 예외로 합니다.
-    </p>
+    <h2>제7조 (개인정보의 안전성 확보 조치)</h2>
     <ul>
-      <li>이용자가 사전에 동의한 경우</li>
-      <li>법령에 의거하거나 수사기관의 적법한 요구가 있는 경우</li>
+      <li>비밀번호 등 민감 정보는 해시 처리하여 저장</li>
+      <li>모든 통신 구간 TLS 1.2 이상 암호화</li>
+      <li>데이터베이스 접근은 Row-Level Security로 사업장 단위 격리</li>
+      <li>SMS API 키 등 민감 자격증명은 별도 격리 테이블에 저장하고 클라이언트에서 읽을 수 없도록 제한</li>
+      <li>운영자의 기술지원 목적 데이터 접근은 접근 이력(감사 로그)으로 기록·관리</li>
     </ul>
 
-    <h2>5. 개인정보 처리 위탁</h2>
+    <h2>제8조 (쿠키 등 자동 수집 도구)</h2>
     <p>
-      현재 위탁 처리하는 업무는 없습니다. 향후 위탁이 발생할 경우 본 방침을 통해
-      위탁업체와 위탁업무 내용을 공지합니다.
+      서비스는 로그인 세션 유지 등 서비스 제공에 필요한 범위에서 쿠키를 사용하며,
+      웹 호스팅(Vercel) 기본 로그(요청 IP, 시간)가 수집될 수 있습니다.
+      광고·추적 목적의 별도 쿠키는 사용하지 않으며, 접속 통계 도구를 도입할 경우
+      본 방침을 갱신하여 사전 고지합니다.
     </p>
 
-    <h2>6. 이용자의 권리</h2>
+    <h2>제9조 (개인정보 보호 책임자 / 문의처)</h2>
     <p>
-      이용자는 언제든지 다음 권리를 행사할 수 있습니다.
+      회사는 개인정보 처리에 관한 업무를 총괄하고 정보주체의 불만 처리 및 피해 구제 등을
+      위해 개인정보 보호 책임자를 지정합니다.
     </p>
-    <ul>
-      <li>개인정보 열람 요구</li>
-      <li>오류 등이 있을 경우 정정 요구</li>
-      <li>삭제 및 처리 정지 요구</li>
-    </ul>
-    <p>
-      권리 행사는 아래 문의처로 서면, 전화, 이메일로 요청하실 수 있으며 회사는
-      지체 없이 조치합니다.
-    </p>
-
-    <h2>7. 쿠키 등 자동 수집 도구</h2>
-    <p>
-      본 홈페이지(sunaprok.kr)는 별도의 광고·추적용 쿠키를 사용하지 않으며,
-      Vercel 호스팅 기본 로그(요청 IP, 시간) 외 추가 수집을 하지 않습니다.
-      추후 접속 통계 도구(GA4 또는 Plausible) 도입 시 본 방침을 갱신하여 사전 고지합니다.
-    </p>
-
-    <h2>8. 개인정보 보호책임자 / 문의처</h2>
+    <!-- TODO: 실제 연락처로 교체 (개인정보 보호 책임자 성명 포함) -->
     <div class="legal-contact">
       <div><strong>판매·운영</strong> 굿플로우</div>
       <div><strong>사업자등록번호</strong> 881-40-01364</div>
@@ -129,14 +148,18 @@
       <div><strong>이메일</strong> <a href="mailto:hello@sunaprok.kr">hello@sunaprok.kr</a></div>
     </div>
 
-    <h2>9. 방침 변경 안내</h2>
+    <h2>제10조 (방침의 변경)</h2>
     <p>
-      본 개인정보처리방침은 법령·정책·서비스 변경에 따라 개정될 수 있으며,
-      변경 시 <strong>시행 7일 전</strong>(이용자에게 중대한 변경이 있는 경우 30일 전)
-      본 페이지에 공지합니다.
+      본 방침의 변경 시 시행일 7일 전부터 서비스 내 또는 본 페이지에 공지하며,
+      회원에게 불리한 중대한 변경은 30일 전부터 공지합니다.
     </p>
 
-    <p class="legal-foot">시행일: 2026-05-20</p>
+    <p class="legal-note">
+      ※ 본 방침은 변호사·개인정보보호 책임자 검토 전 초안입니다. 실 서비스 전 책임자
+      연락처·정확한 위탁업체 정보·국외 이전 고지 등 세부 사항의 보완 및 법률 검토가 필요합니다.
+    </p>
+
+    <p class="legal-foot">시행일: 2026-06-21</p>
 
     <p class="legal-back"><a href="/">← 메인으로 돌아가기</a></p>
   </div>
@@ -146,14 +169,9 @@
 <footer class="ft">
   <div class="container ft-inner">
     <div class="ft-brand">
-      <svg width="32" height="32" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-        <rect x="2" y="2" width="40" height="40" rx="10" fill="#1D9E75"/>
-        <rect x="10" y="8" width="24" height="28" rx="4" fill="none" stroke="white" stroke-width="2"/>
-        <line x1="15" y1="17" x2="29" y2="17" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-        <line x1="15" y1="22" x2="29" y2="22" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-        <line x1="15" y1="27" x2="22" y2="27" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-        <circle cx="28" cy="27" r="4" fill="#5DCAA5"/>
-      </svg>
+      <span style="display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:9px;padding:2px;box-shadow:0 1px 2px rgba(0,0,0,.12)">
+        <img src="/android-icon-192x192.png" alt="" aria-hidden="true" width="32" height="32" style="display:block;border-radius:7px">
+      </span>
       <div>
         <div class="ft-brand-ko">수납록 <span class="ft-brand-en">SunapRok</span></div>
         <div class="ft-brand-sub">폐기물 처리장 수납·청구·정산 통합 관리</div>
@@ -163,12 +181,14 @@
     <div class="ft-info">
       <div class="ft-col">
         <div class="ft-col-h">판매</div>
+        <!-- TODO: 실제 연락처로 교체 -->
         <div>굿플로우</div>
         <div>사업자등록번호 881-40-01364</div>
         <div>대표 전화 <a href="tel:010-9104-2952">010-9104-2952</a></div>
       </div>
       <div class="ft-col">
         <div class="ft-col-h">문의</div>
+        <!-- TODO: 실제 연락처로 교체 -->
         <div><a href="mailto:hello@sunaprok.kr">hello@sunaprok.kr</a></div>
         <div><a href="/#contact">1:1 데모 신청</a></div>
         <div><a href="/#pricing">가격 안내</a></div>
@@ -177,7 +197,7 @@
         <div class="ft-col-h">정책</div>
         <div><a href="/terms.html">이용약관</a></div>
         <div><a href="/privacy.html">개인정보처리방침</a></div>
-        <div><span class="ft-mute">v1.0.0 · 2026-05</span></div>
+        <div><span class="ft-mute">v2.0.0 · 2026-06</span></div>
       </div>
     </div>
   </div>
