@@ -1,9 +1,9 @@
 :root {
-  --g900: #085041;
-  --g800: #0F6E56;
-  --g600: #1D9E75;
-  --g400: #5DCAA5;
-  --g50:  #E1F5EE;
+  --g900: #1B5E20;
+  --g800: #2E7D32;
+  --g600: #43A047;
+  --g400: #66BB6A;
+  --g50:  #E8F5E9;
   --coal: #2C2C2A;
   --ink:  #1f1f1d;
   --gray: #6b6a64;
@@ -16,8 +16,8 @@
 
   --radius: 12px;
   --radius-sm: 8px;
-  --shadow-sm: 0 1px 2px rgba(8,80,65,.06), 0 1px 3px rgba(8,80,65,.04);
-  --shadow-md: 0 4px 12px rgba(8,80,65,.08), 0 2px 4px rgba(8,80,65,.04);
+  --shadow-sm: 0 1px 2px rgba(27,94,32,.06), 0 1px 3px rgba(27,94,32,.04);
+  --shadow-md: 0 4px 12px rgba(27,94,32,.08), 0 2px 4px rgba(27,94,32,.04);
 
   --container: 1120px;
 }
@@ -83,9 +83,9 @@ button { font: inherit; cursor: pointer; }
 /* ============ HERO ============ */
 .hero {
   background:
-    radial-gradient(1200px 600px at 80% -10%, rgba(93,202,165,.18), transparent 60%),
-    radial-gradient(800px 400px at 10% 110%, rgba(29,158,117,.12), transparent 60%),
-    linear-gradient(180deg, #08332b 0%, #0a4337 60%, #0e5848 100%);
+    radial-gradient(1200px 600px at 80% -10%, rgba(102,187,106,.18), transparent 60%),
+    radial-gradient(800px 400px at 10% 110%, rgba(67,160,71,.12), transparent 60%),
+    linear-gradient(180deg, #003909 0%, #003909 60%, #1B5E20 100%);
   color: var(--white);
   padding: 92px 24px 96px;
   overflow: hidden;
@@ -104,8 +104,8 @@ button { font: inherit; cursor: pointer; }
   font-weight: 700;
   letter-spacing: .12em;
   color: var(--g400);
-  background: rgba(93,202,165,.12);
-  border: 1px solid rgba(93,202,165,.28);
+  background: rgba(102,187,106,.12);
+  border: 1px solid rgba(102,187,106,.28);
   padding: 6px 12px;
   border-radius: 999px;
   margin-bottom: 22px;
@@ -120,7 +120,7 @@ button { font: inherit; cursor: pointer; }
 .hero-h em {
   color: var(--g400);
   font-style: normal;
-  background: linear-gradient(180deg, transparent 60%, rgba(93,202,165,.22) 60%);
+  background: linear-gradient(180deg, transparent 60%, rgba(102,187,106,.22) 60%);
   padding: 0 4px;
 }
 .hero-sub {
@@ -177,13 +177,13 @@ button { font: inherit; cursor: pointer; }
 .btn-primary {
   background: var(--g600);
   color: var(--white);
-  box-shadow: 0 6px 16px rgba(29,158,117,.32);
+  box-shadow: 0 6px 16px rgba(67,160,71,.32);
 }
 .btn-primary:hover {
   background: var(--g400);
   color: var(--g900);
   transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(29,158,117,.36);
+  box-shadow: 0 10px 22px rgba(67,160,71,.36);
 }
 .btn-secondary {
   background: rgba(255,255,255,.10);
@@ -262,13 +262,13 @@ section { padding: 88px 0; }
   background: var(--g50);
   border-radius: var(--radius);
   padding: 28px 26px;
-  border: 1px solid rgba(29,158,117,.12);
+  border: 1px solid rgba(67,160,71,.12);
   transition: transform .2s, box-shadow .2s, border-color .2s;
 }
 .feat-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(15,110,86,.10);
-  border-color: rgba(29,158,117,.30);
+  box-shadow: 0 8px 20px rgba(46,125,50,.10);
+  border-color: rgba(67,160,71,.30);
 }
 .feat-icon {
   width: 44px; height: 44px;
@@ -308,7 +308,7 @@ section { padding: 88px 0; }
   background: var(--g800);
   border-color: var(--g800);
   color: var(--white);
-  box-shadow: 0 6px 16px rgba(15,110,86,.22);
+  box-shadow: 0 6px 16px rgba(46,125,50,.22);
 }
 .flow-tag {
   font-family: 'Inter', sans-serif;
@@ -394,7 +394,7 @@ section { padding: 88px 0; }
 }
 .price-card.is-main {
   border: 2px solid var(--g600);
-  box-shadow: 0 12px 32px rgba(15,110,86,.14);
+  box-shadow: 0 12px 32px rgba(46,125,50,.14);
   transform: scale(1.02);
 }
 .price-badge {
@@ -559,8 +559,8 @@ section { padding: 88px 0; }
 /* ============ CTA ============ */
 .cta {
   background:
-    radial-gradient(800px 400px at 80% 30%, rgba(93,202,165,.16), transparent 60%),
-    linear-gradient(180deg, #0a4337 0%, #085041 100%);
+    radial-gradient(800px 400px at 80% 30%, rgba(102,187,106,.16), transparent 60%),
+    linear-gradient(180deg, #003909 0%, #1B5E20 100%);
   color: var(--white);
   text-align: center;
 }
