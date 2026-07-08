@@ -363,12 +363,15 @@ section { padding: 88px 0; }
 
 /* ============ PAIN ============ */
 .pain { background: var(--bg); }
+/* 카드 5개 — flex+center로 3+2 균형 배치(마지막 줄 중앙정렬, 고아 카드 방지). */
 .pain-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
 }
 .pain-card {
+  flex: 0 1 320px;
   background: var(--white);
   border-radius: var(--radius);
   padding: 24px 22px;
