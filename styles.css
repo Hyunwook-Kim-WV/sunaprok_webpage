@@ -118,7 +118,7 @@ button { font: inherit; cursor: pointer; }
   display: grid;
   grid-template-columns: 52fr 48fr;
   gap: 48px;
-  align-items: center;
+  align-items: start;
 }
 .hero-eyebrow {
   display: inline-block;
@@ -225,7 +225,7 @@ button { font: inherit; cursor: pointer; }
   color: var(--g900);
   font-weight: 700;
 }
-.app-main { flex: 1 1 auto; min-width: 0; padding: 18px 18px 20px; }
+.app-main { flex: 1 1 auto; min-width: 0; padding: 18px 18px 20px; display: grid; }
 .app-main-h {
   font-size: 13px;
   font-weight: 700;
@@ -322,8 +322,10 @@ button { font: inherit; cursor: pointer; }
   animation: demopulse 2.4s ease-in-out infinite;
 }
 @keyframes demopulse { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
-.app-panel { display: none; }
-.app-panel.is-active { display: block; animation: appfade .24s ease; }
+/* 모든 패널을 같은 그리드 셀에 겹쳐 쌓아 창 높이를 항상 최대 패널 기준으로 고정
+   (탭 전환 시 창 크기가 흔들리지 않음). 비활성 패널은 자리는 차지하되 숨김. */
+.app-panel { grid-area: 1 / 1; visibility: hidden; opacity: 0; }
+.app-panel.is-active { visibility: visible; opacity: 1; animation: appfade .24s ease; }
 @keyframes appfade { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
 .app-red { color: var(--red); }
 
