@@ -50,6 +50,8 @@ body {
   background: var(--bg);
   color: var(--ink);
   line-height: 1.65;
+  /* 한국어는 음절 단위로 끊지 않고 어절(공백) 단위로 줄바꿈 — "즉시"가 즉/시로 쪼개지는 것 방지 */
+  word-break: keep-all;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -143,6 +145,7 @@ button { font: inherit; cursor: pointer; }
 .hero-h em {
   color: var(--g800);
   font-style: normal;
+  white-space: nowrap;
   background: linear-gradient(180deg, transparent 60%, rgba(102,187,106,.28) 60%);
   padding: 0 4px;
 }
@@ -1075,6 +1078,8 @@ section { padding: 88px 0; }
     gap: 32px;
   }
   .hero-preview { max-width: 480px; margin-inline: auto; }
+  /* 데스크톱 줄맞춤용 수동 줄바꿈 — 모바일에선 없애고 자연스럽게 흐르게 (외톨이 단어 방지) */
+  .hero-sub br { display: none; }
   .nav-links { display: none; }
 
   .price-panel { padding: 28px 22px; }
