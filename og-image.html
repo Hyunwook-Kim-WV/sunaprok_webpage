@@ -10,6 +10,7 @@
   body {
     font-family: 'Noto Sans KR', sans-serif;
     color: #fff;
+    word-break: keep-all;
     background:
       radial-gradient(900px 500px at 85% -5%, rgba(102,187,106,.32), transparent 60%),
       radial-gradient(700px 380px at 8% 110%, rgba(67,160,71,.22), transparent 60%),
@@ -60,15 +61,16 @@
     margin-bottom: 28px;
   }
   .headline {
-    font-size: 72px;
+    font-size: 56px;
     font-weight: 800;
-    line-height: 1.22;
+    line-height: 1.25;
     letter-spacing: -.025em;
     margin-bottom: 28px;
   }
   .headline em {
     color: #66BB6A;
     font-style: normal;
+    white-space: nowrap;
     background: linear-gradient(180deg, transparent 64%, rgba(102,187,106,.28) 64%);
     padding: 0 6px;
   }
