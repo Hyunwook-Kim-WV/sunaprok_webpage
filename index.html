@@ -187,81 +187,181 @@
         <span>· 카드 없이 체험</span>
       </div>
     </div>
-    <div class="hero-preview" aria-hidden="true">
-      <div class="app-window">
+    <div class="hero-preview">
+      <div class="app-window" role="group" aria-label="수납록 화면 미리보기 — 왼쪽 메뉴를 눌러 화면을 바꿔보세요">
         <div class="app-window-bar">
           <span class="app-window-dots"><span></span><span></span><span></span></span>
-          <span class="app-window-url">sunaprok.app · 오늘 입고</span>
+          <span class="app-window-url" data-url>sunaprok.app · 오늘 입고</span>
+          <span class="app-demo-hint">눌러보세요 ›</span>
         </div>
         <div class="app-body">
           <div class="app-sidebar">
             <div class="app-sidebar-brand">수납록</div>
             <nav class="app-nav">
-              <span class="app-nav-item is-active">오늘 입고</span>
-              <span class="app-nav-item">청구 관리</span>
-              <span class="app-nav-item">입금 관리</span>
-              <span class="app-nav-item">장부</span>
+              <button type="button" class="app-nav-item is-active" data-panel="today" data-title="오늘 입고">오늘 입고</button>
+              <button type="button" class="app-nav-item" data-panel="charge" data-title="청구 관리">청구 관리</button>
+              <button type="button" class="app-nav-item" data-panel="payment" data-title="입금 관리">입금 관리</button>
+              <button type="button" class="app-nav-item" data-panel="report" data-title="장부">장부</button>
             </nav>
           </div>
           <div class="app-main">
-            <div class="app-main-h">오늘 입고</div>
-            <div class="app-stat-row">
-              <div class="app-stat">
-                <div class="app-stat-label">오늘 총 금액 · 유효 7건</div>
-                <div class="app-stat-num">9,990,000<span>원</span></div>
+
+            <!-- 오늘 입고 -->
+            <div class="app-panel is-active" data-panel="today">
+              <div class="app-main-h">오늘 입고</div>
+              <div class="app-stat-row">
+                <div class="app-stat">
+                  <div class="app-stat-label">오늘 총 금액 · 유효 7건</div>
+                  <div class="app-stat-num">9,990,000<span>원</span></div>
+                </div>
+                <div class="app-stat-chips">
+                  <span class="app-chip is-amber">미발송 2</span>
+                  <span class="app-chip is-red">미입금 4</span>
+                </div>
               </div>
-              <div class="app-stat-chips">
-                <span class="app-chip is-amber">미발송 2</span>
-                <span class="app-chip is-red">미입금 4</span>
+              <div class="app-table">
+                <div class="app-row">
+                  <div class="app-row-top">
+                    <span class="app-time">16:42</span>
+                    <span class="app-car">경기88바1234</span>
+                    <span class="app-dispatcher">한빛운수</span>
+                  </div>
+                  <div class="app-row-bottom">
+                    <span class="app-waste">혼합폐기물</span>
+                    <span class="app-amount">850,000원</span>
+                    <span class="app-badges">
+                      <span class="app-badge is-amber">미발송</span>
+                      <span class="app-badge is-red">미입금</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="app-row">
+                  <div class="app-row-top">
+                    <span class="app-time">15:57</span>
+                    <span class="app-car">서울37사5821</span>
+                    <span class="app-dispatcher">대한환경</span>
+                  </div>
+                  <div class="app-row-bottom">
+                    <span class="app-waste">폐합성수지</span>
+                    <span class="app-amount">1,240,000원</span>
+                    <span class="app-badges">
+                      <span class="app-badge is-green">발송</span>
+                      <span class="app-badge is-green">입금</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="app-row">
+                  <div class="app-row-top">
+                    <span class="app-time">15:10</span>
+                    <span class="app-car">인천04아7712</span>
+                    <span class="app-dispatcher">한빛운수</span>
+                  </div>
+                  <div class="app-row-bottom">
+                    <span class="app-waste">건설폐기물</span>
+                    <span class="app-amount">2,180,000원</span>
+                    <span class="app-badges">
+                      <span class="app-badge is-green">발송</span>
+                      <span class="app-badge is-red">미입금</span>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="app-table">
-              <div class="app-row">
-                <div class="app-row-top">
-                  <span class="app-time">16:42</span>
-                  <span class="app-car">경기88바1234</span>
-                  <span class="app-dispatcher">한빛운수</span>
-                </div>
-                <div class="app-row-bottom">
-                  <span class="app-waste">혼합폐기물</span>
-                  <span class="app-amount">850,000원</span>
-                  <span class="app-badges">
-                    <span class="app-badge is-amber">미발송</span>
-                    <span class="app-badge is-red">미입금</span>
+
+            <!-- 청구 관리 -->
+            <div class="app-panel" data-panel="charge">
+              <div class="app-main-h">청구 관리</div>
+              <div class="app-hintline">청구할 건을 선택해 SMS로 한 번에 보냅니다.</div>
+              <div class="app-list">
+                <button type="button" class="app-crow is-selected" data-amt="850000">
+                  <span class="app-check"></span>
+                  <span class="app-crow-body">
+                    <span class="app-crow-top"><b>한빛운수</b> · 경기88바1234</span>
+                    <span class="app-crow-sub">혼합폐기물 · 850,000원</span>
                   </span>
+                  <span class="app-badge is-amber">미발송</span>
+                </button>
+                <button type="button" class="app-crow is-selected" data-amt="1240000">
+                  <span class="app-check"></span>
+                  <span class="app-crow-body">
+                    <span class="app-crow-top"><b>대한환경</b> · 서울37사5821</span>
+                    <span class="app-crow-sub">폐합성수지 · 1,240,000원</span>
+                  </span>
+                  <span class="app-badge is-amber">미발송</span>
+                </button>
+                <button type="button" class="app-crow" disabled data-amt="2180000">
+                  <span class="app-check"></span>
+                  <span class="app-crow-body">
+                    <span class="app-crow-top"><b>한빛운수</b> · 인천04아7712</span>
+                    <span class="app-crow-sub">건설폐기물 · 2,180,000원</span>
+                  </span>
+                  <span class="app-badge is-green">발송완료</span>
+                </button>
+              </div>
+              <div class="app-foot">
+                <span class="app-foot-info">선택 <b data-sel-count>2</b>건 · 합계 <b data-sel-total>2,090,000원</b></span>
+                <span class="app-mini-btn">선택 발송</span>
+              </div>
+            </div>
+
+            <!-- 입금 관리 -->
+            <div class="app-panel" data-panel="payment">
+              <div class="app-main-h">입금 관리</div>
+              <div class="app-stat-row">
+                <div class="app-stat">
+                  <div class="app-stat-label">오늘 입금</div>
+                  <div class="app-stat-num">2,090,000<span>원</span></div>
+                </div>
+                <div class="app-stat-chips">
+                  <span class="app-chip is-red" data-unpaid-chip="1">미입금 1</span>
                 </div>
               </div>
-              <div class="app-row">
-                <div class="app-row-top">
-                  <span class="app-time">15:57</span>
-                  <span class="app-car">서울37사5821</span>
-                  <span class="app-dispatcher">대한환경</span>
+              <div class="app-rows">
+                <div class="app-hrow">
+                  <span class="app-hrow-name">한빛운수 <span class="app-hrow-sub">· 850,000원</span></span>
+                  <span class="app-hrow-right"><span class="app-badge is-green">현금</span></span>
                 </div>
-                <div class="app-row-bottom">
-                  <span class="app-waste">폐합성수지</span>
-                  <span class="app-amount">1,240,000원</span>
-                  <span class="app-badges">
-                    <span class="app-badge is-green">발송</span>
-                    <span class="app-badge is-green">입금</span>
-                  </span>
+                <div class="app-hrow">
+                  <span class="app-hrow-name">대한환경 <span class="app-hrow-sub">· 1,240,000원</span></span>
+                  <span class="app-hrow-right"><span class="app-badge is-green">세금계산서</span></span>
                 </div>
-              </div>
-              <div class="app-row">
-                <div class="app-row-top">
-                  <span class="app-time">15:10</span>
-                  <span class="app-car">인천04아7712</span>
-                  <span class="app-dispatcher">한빛운수</span>
-                </div>
-                <div class="app-row-bottom">
-                  <span class="app-waste">건설폐기물</span>
-                  <span class="app-amount">2,180,000원</span>
-                  <span class="app-badges">
-                    <span class="app-badge is-green">발송</span>
-                    <span class="app-badge is-red">미입금</span>
-                  </span>
+                <div class="app-hrow">
+                  <span class="app-hrow-name">한빛운수 <span class="app-hrow-sub">· 2,180,000원</span></span>
+                  <span class="app-hrow-right"><button type="button" class="app-mini-btn app-pay-btn">입금 등록</button></span>
                 </div>
               </div>
             </div>
+
+            <!-- 장부 -->
+            <div class="app-panel" data-panel="report">
+              <div class="app-main-h">장부</div>
+              <div class="app-stat-duo">
+                <div class="app-ministat">
+                  <span class="app-ministat-label">미수 총액</span>
+                  <span class="app-ministat-num app-red">5,420,000원</span>
+                </div>
+                <div class="app-ministat">
+                  <span class="app-ministat-label">이번 달 매출</span>
+                  <span class="app-ministat-num">48,300,000원</span>
+                </div>
+              </div>
+              <div class="app-ledger-h">거래처별 미수 잔액</div>
+              <div class="app-rows">
+                <div class="app-hrow">
+                  <span class="app-hrow-name">한빛운수</span>
+                  <span class="app-hrow-right"><span class="app-amount">2,180,000원</span></span>
+                </div>
+                <div class="app-hrow">
+                  <span class="app-hrow-name">대한환경 <span class="app-badge is-red">60일+</span></span>
+                  <span class="app-hrow-right"><span class="app-amount app-red">1,240,000원</span></span>
+                </div>
+                <div class="app-hrow">
+                  <span class="app-hrow-name">삼성ENG</span>
+                  <span class="app-hrow-right"><span class="app-amount">2,000,000원</span></span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

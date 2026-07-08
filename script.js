@@ -48,4 +48,68 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     render();
   }
+
+  // 히어로 미리보기 — 사이드바 탭으로 화면 전환 + 청구 선택/입금 등록 미니 인터랙션
+  const appWin = document.querySelector('.hero-preview .app-window');
+  if (appWin) {
+    const navBtns = appWin.querySelectorAll('.app-nav-item');
+    const panels = appWin.querySelectorAll('.app-panel');
+    const urlEl = appWin.querySelector('[data-url]');
+    navBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const key = btn.dataset.panel;
+        navBtns.forEach((b) => b.classList.toggle('is-active', b === btn));
+        panels.forEach((p) => p.classList.toggle('is-active', p.dataset.panel === key));
+        if (urlEl && btn.dataset.title) urlEl.textContent = `sunaprok.app · ${btn.dataset.title}`;
+      });
+    });
+
+    // 청구: 행 선택 토글 → 선택 건수·합계 실시간 갱신
+    const chargePanel = appWin.querySelector('.app-panel[data-panel="charge"]');
+    if (chargePanel) {
+      const rows = chargePanel.querySelectorAll('.app-crow:not([disabled])');
+      const countEl = chargePanel.querySelector('[data-sel-count]');
+      const totalEl = chargePanel.querySelector('[data-sel-total]');
+      const fmt = (n) => n.toLocaleString('ko-KR') + '원';
+      const recompute = () => {
+        let n = 0;
+        let sum = 0;
+        rows.forEach((r) => {
+          if (r.classList.contains('is-selected')) {
+            n += 1;
+            sum += Number(r.dataset.amt) || 0;
+          }
+        });
+        if (countEl) countEl.textContent = String(n);
+        if (totalEl) totalEl.textContent = fmt(sum);
+      };
+      rows.forEach((r) =>
+        r.addEventListener('click', () => {
+          r.classList.toggle('is-selected');
+          recompute();
+        }),
+      );
+      recompute();
+    }
+
+    // 입금: '입금 등록' 클릭 → 입금완료 배지로 전환 + 미입금 카운트 감소
+    const payPanel = appWin.querySelector('.app-panel[data-panel="payment"]');
+    if (payPanel) {
+      const chip = payPanel.querySelector('[data-unpaid-chip]');
+      payPanel.querySelectorAll('.app-pay-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const badge = document.createElement('span');
+          badge.className = 'app-badge is-green';
+          badge.textContent = '현금';
+          btn.replaceWith(badge);
+          if (chip) {
+            const left = Math.max(0, (Number(chip.dataset.unpaidChip) || 1) - 1);
+            chip.dataset.unpaidChip = String(left);
+            if (left === 0) chip.style.display = 'none';
+            else chip.textContent = `미입금 ${left}`;
+          }
+        });
+      });
+    }
+  }
 });
